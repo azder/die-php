@@ -9,9 +9,9 @@
 namespace Azder\D;
 
 
-function json( $expression )
+function jsonln( $expression )
 {
-    die( json_encode( $expression, JSON_PRETTY_PRINT ) );
+    die( json_encode( $expression, JSON_PRETTY_PRINT ) . PHP_EOL );
 }
 
 
