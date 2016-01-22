@@ -21,10 +21,24 @@ function export( $expression )
     die();
 }
 
+function exportln( $expression )
+{
+    var_export( $expression );
+    print PHP_EOL;
+    die();
+}
+
 
 function dump( $expression )
 {
     var_dump( $expression );
+    die();
+}
+
+function dumpln( $expression )
+{
+    var_dump( $expression );
+    print PHP_EOL;
     die();
 }
 
@@ -35,6 +49,20 @@ function printr( $expression )
     die();
 }
 
+
+function printrln( $expression )
+{
+    print_r( $expression );
+    print PHP_EOL;
+    die();
+}
+
+
+function prnt( $string )
+{
+    print $string;
+    die();
+}
 
 function println( $string )
 {
