@@ -1,6 +1,5 @@
 {
   "name": "azder/die",
-  "version": "0.2.0",
   "description": "A PHP helper library to DIE for",
   "license": "MIT",
   "autoload": {
