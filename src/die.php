@@ -11,14 +11,13 @@ namespace Azder\D;
 const CT_JSON = 'application/json; charset=utf-8';
 const CT_TEXT = 'text/plain; charset=utf-8';
 
+function jsonln($expression) {
+    die(json_encode($expression, JSON_PRETTY_PRINT) . PHP_EOL);
+}
+
 function ctjsonln($expression) {
     header('Content-Type: ' . CT_JSON);
     jsonln($expression);
-}
-
-
-function jsonln($expression) {
-    die(json_encode($expression, JSON_PRETTY_PRINT) . PHP_EOL);
 }
 
 
@@ -33,6 +32,11 @@ function exportln($expression) {
     die();
 }
 
+function ctexportln($expression) {
+    header('Content-Type: ' . CT_TEXT);
+    exportln($expression);
+}
+
 
 function dump($expression) {
     var_dump($expression);
@@ -45,16 +49,15 @@ function dumpln($expression) {
     die();
 }
 
+function ctdumpln($expression) {
+    header('Content-Type: ' . CT_TEXT);
+    dumpln($expression);
+}
+
 
 function printr($expression) {
     print_r($expression);
     die();
-}
-
-
-function ctprintrln($expression) {
-    header('Content-Type: ' . CT_TEXT);
-    printrln($expression);
 }
 
 function printrln($expression) {
@@ -63,9 +66,19 @@ function printrln($expression) {
     die();
 }
 
+function ctprintrln($expression) {
+    header('Content-Type: ' . CT_TEXT);
+    printrln($expression);
+}
+
 
 function prnt($string) {
     print $string;
+    die();
+}
+
+function println($string) {
+    print $string . PHP_EOL;
     die();
 }
 
@@ -74,8 +87,4 @@ function ctprintln($expression) {
     println($expression);
 }
 
-function println($string) {
-    print $string . PHP_EOL;
-    die();
-}
 
