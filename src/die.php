@@ -49,6 +49,11 @@ function printr($expression) {
 }
 
 
+function ctprintrln($expression) {
+    header('Content-Type: text/plain');
+    printrln($expression);
+}
+
 function printrln($expression) {
     print_r($expression);
     print PHP_EOL;
@@ -59,6 +64,11 @@ function printrln($expression) {
 function prnt($string) {
     print $string;
     die();
+}
+
+function ctprintln($expression) {
+    header('Content-Type: text/plain');
+    println($expression);
 }
 
 function println($string) {
