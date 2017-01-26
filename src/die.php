@@ -8,8 +8,11 @@
  */
 namespace Azder\D;
 
+const CT_JSON = 'application/json; charset=utf-8';
+const CT_TEXT = 'text/plain; charset=utf-8';
+
 function ctjsonln($expression) {
-    header('Content-Type: application/json');
+    header('Content-Type: ' . CT_JSON);
     jsonln($expression);
 }
 
@@ -50,7 +53,7 @@ function printr($expression) {
 
 
 function ctprintrln($expression) {
-    header('Content-Type: text/plain');
+    header('Content-Type: ' . CT_TEXT);
     printrln($expression);
 }
 
@@ -67,7 +70,7 @@ function prnt($string) {
 }
 
 function ctprintln($expression) {
-    header('Content-Type: text/plain');
+    header('Content-Type: ' . CT_TEXT);
     println($expression);
 }
 
