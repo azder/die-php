@@ -10,6 +10,7 @@ namespace Azder\D;
 
 const CT_JSON = 'application/json; charset=utf-8';
 const CT_TEXT = 'text/plain; charset=utf-8';
+const CT_HTML = 'text/html; charset=utf-8';
 
 function jsonln($expression) {
     die(json_encode($expression, JSON_PRETTY_PRINT) . PHP_EOL);
@@ -50,7 +51,7 @@ function dumpln($expression) {
 }
 
 function ctdumpln($expression) {
-    header('Content-Type: ' . CT_TEXT);
+    header('Content-Type: ' . CT_HTML);
     dumpln($expression);
 }
 
